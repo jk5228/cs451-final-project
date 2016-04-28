@@ -1,3 +1,192 @@
-h1 {
-	color: blue;
+body {
+	background-color: #222;
+}
+
+#view {
+	position: relative;
+	width: 68vh;
+	height: 84vh;
+	margin-top: 3vh;
+	margin-right: auto;
+	margin-left: auto;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	border-left: 2vh;
+	border-right: 2vh;
+	border-top: 5vh;
+	border-bottom: 5vh;
+	border-style: solid;
+	border-radius: 3vh;
+	border-color: rgba(0,0,0,.2);
+	overflow-x: hidden;
+
+	#view-plane {
+		height: 100%;
+		width: 210vh;
+	}
+}
+
+.page {
+	float: left;
+	position: relative;
+	display: inline-block;
+	width: 68vh;
+	height: 84vh;
+	background-color: white;
+	color: #222;
+	left: 1rem;
+	-webkit-transition: left 0.3s ease-in-out;
+	-moz-transition: left 0.3s ease-in-out;
+	-o-transition: left 0.3s ease-in-out;
+	transition: left 0.3s ease-in-out;
+
+	div.image {
+		cursor: pointer;
+		height: 40%;
+		background-origin: center;
+	}
+
+	p {
+		margin: 1.5rem;
+		font-family: 'garamond';
+	}
+
+	p:first-child {
+		padding-top: 0.2rem;
+	}
+}
+
+#page1 {
+	z-index: 300;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+
+	#pl1 {
+		background-size: cover;
+		background-image: url('assets/pl1.jpg');
+	}
+}
+
+.page.explore {
+	background-color: #efefef;
+	box-shadow: none;
+}
+
+.hidden {
+	pointer-events: none;
+	opacity: 0 !important;
+}
+
+.focus {
+	left: 0px;
+}
+
+#modal {
+	z-index: 400;
+	background-color: rgba(255,255,255,0.9);
+	position: absolute;
+	display: block;
+	opacity: 1;
+	width: 68vh;
+	height: 84vh;
+	top: 0;
+	left: 0;
+	-webkit-transition: opacity 0.1s ease-in-out;
+	-moz-transition: opacity 0.1s ease-in-out;
+	-o-transition: opacity 0.1s ease-in-out;
+	transition: opacity 0.1s ease-in-out;
+
+	#close {
+		position: absolute;
+		right: 0;
+		height: 2rem;
+		width: 2rem;
+		margin: 2rem;
+		margin-top: 0;
+		background-size: cover;
+		background-image: url('assets/close.png');
+		cursor: pointer;
+	}
+
+	#profile {
+		padding: 2rem;
+		margin-bottom: 3.5rem;
+
+		.photo {
+			display: inline-block;
+			float: left;
+			width: 3.5rem;
+			height: 3.5rem;
+			border-radius: 1.75rem;
+			background-size: cover;
+			background-image: url('assets/dicorcia.jpg');
+		}
+
+		.text {
+			margin-left: 2rem;
+			float: left;
+			display: inline-block;
+
+			.name {
+				margin-top: 0.4rem;
+				font-family: 'myriad pro';
+				font-size: 1.5rem;
+				font-weight: bold;
+			}
+
+			.title {
+				font-family: 'myriad pro';
+			}
+		}
+	}
+
+	#image {
+		height: 40%;
+		margin-bottom: 2.5rem;
+		background-size: cover;
+		background-image: url('assets/pl1.jpg');
+	}
+
+	#meta {
+		#top {
+			padding-left: 2rem;
+			padding-right: 2rem;
+			overflow: auto;
+
+			#title {
+				margin-top: 0.5rem;
+				display: inline-block;
+				float: left;
+				font-family: 'myriad pro';
+
+				h2 {
+					font-size: 2rem;
+					line-height: 0.6;
+					margin: 0;
+				}
+
+				h4 {
+					font-weight: normal;
+					line-height: 0.6;
+				}
+			}
+
+			#button {
+				cursor: pointer;
+				display: inline-block;
+				float: right;
+				font-family: 'myriad pro';
+				font-weight: 200;
+				padding: 1rem;
+				text-align: center;
+				color: white;
+				background-color: rgb(190,66,67);
+			}
+		}
+
+		#description {
+			padding: 2rem;
+			padding-top: 1.5rem;
+			font-family: 'garamond';
+		}
+	}
 }

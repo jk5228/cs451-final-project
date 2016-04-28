@@ -2,9 +2,46 @@
   <link rel="stylesheet" href="main.css" />
 </head>
 <body>
-  <h1>header</h1>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/utils/Draggable.min.js"></script>
+  <div id="view">
+    <div id="view-plane">
+      <div id="modal" class="page hidden">
+        <div id="profile">
+          <div class="photo"></div>
+          <div class="text">
+            <div class="name">Philip-Lorca diCorcia</div>
+            <div class="title">Photographer</div>
+          </div>
+          <div id="close"></div>
+        </div>
+        <div id="image"></div>
+        <div id="meta">
+          <div id="top">
+            <div id="title">
+              <h2>Head #7</h2>
+              <h4>New York, New York, 2000</h4>
+            </div>
+            <div id="button">Related Photos</div>
+          </div>
+          <div id="description">
+            This photograph was taken as part of Philip-Lorca diCorcia's celebrated work Heads, a series that explores the alienation and forced inwardness experienced not only by urban America but by humanity in the the modern age. The production of these photographs is almost as remarkable as the images themselves, blurring the line between candid street photography and filmic dramatization.
+          </div>
+        </div>
+      </div>
+      <div id="page1" class="page book focus">
+        <p>Dorian Devens: How did you get started in photography?</p>
+        <p>Philip-Lorca diCorcia: I was a student in an art college and it was more or less the first period of conceptual art in the mid 70's and at that time I used it as a kind of documentation for conceptual projects and then when I finished going to art school I decided that, after a brief hiatus as a mail man, I would go to graduate school and then I concentrated on photography purely as a medium in and of itself, not as a means to other forms...</p>
+        <div id="pl1" class="image"></div>
+        <p>D: But, you were obviously very influenced by the conceptual art scene?</p>
+        <p>dC: Yeah, I was. I mean, the first photo class I ever took, if you asked a question, she just said, "Well, read the box." You know, there was no practical or formal training at all, and, it was all about ideas. Nobody really cared about the form.</p>
+        <p>D: Did you do your graduate studies at Yale?</p>
+      </div>
+      <div id="page2" class="page explore"></div>
+      <div id="page3" class="page explore"></div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenLite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/plugins/CSSPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/plugins/ScrollToPlugin.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
   <script src="app.js"></script>
 </body>
