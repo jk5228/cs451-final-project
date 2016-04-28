@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+	// Make explore pages draggable
+	Draggable.create('.explore', {type: 'scrollTop', throwProps: true, edgeResistance: 0.7});
+
 	// Activate modal
 	$('#pl1').click(function() {
 		$('#modal').removeClass('hidden');
