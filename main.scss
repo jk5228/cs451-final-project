@@ -190,3 +190,69 @@ body {
 		}
 	}
 }
+
+.page.explore {
+
+	.card {
+		position: relative;
+		width: 56vh;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 2vh;
+		padding: 2vh;
+		background-color: white;
+		box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+
+		.photo-container {
+			height: 30vh;
+
+			.photo {
+				position: relative;
+				float: left;
+				display: inline-block;
+				background-size: cover;
+			}
+
+			.photo.big {
+				height: 100%;
+				width: 38vh;
+				margin-right: 2vh;
+			}
+
+			.photo.small-container {
+				height: 100%;
+				width: 16vh;
+
+				.photo.small {
+					height: 19.5vh;
+					margin: 0vh;
+				}
+
+				.photo.small:first-child {
+					margin-bottom: 2vh;
+				}
+			}
+		}
+
+		.card-title {
+			font-family: 'myriad pro';
+			font-size: 1.5rem;
+			font-weight: bold;
+			margin-top: 2vh;
+		}
+	}
+}
+
+#page2 {
+	#series.card {
+		.photo.big {
+			background-image: url('assets/pl4.jpg');
+		}
+		.photo.small:nth-child(1) {
+			background-image: url('assets/pl6.jpg');
+		}
+		.photo.small:nth-child(2) {
+			background-image: url('assets/pl7.jpg');
+		}
+	}
+}
