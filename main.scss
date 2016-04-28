@@ -34,11 +34,6 @@ body {
 	height: 84vh;
 	background-color: white;
 	color: #222;
-	left: 1rem;
-	-webkit-transition: left 0.3s ease-in-out;
-	-moz-transition: left 0.3s ease-in-out;
-	-o-transition: left 0.3s ease-in-out;
-	transition: left 0.3s ease-in-out;
 
 	div.image {
 		cursor: pointer;
@@ -54,6 +49,11 @@ body {
 	p:first-child {
 		padding-top: 0.2rem;
 	}
+}
+
+#page2 {
+	z-index: 100;
+	left: -1rem;
 }
 
 #page1 {
@@ -76,8 +76,8 @@ body {
 	opacity: 0 !important;
 }
 
-.focus {
-	left: 0px;
+.breadcrumb {
+	cursor: pointer;
 }
 
 #modal {

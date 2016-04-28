@@ -1,8 +1,3 @@
-function focus(elem) {
-	$('.focus').removeClass('focus');
-	elem.addClass('focus');
-}
-
 $(document).ready(function() {
 
 	// Activate modal
@@ -15,14 +10,24 @@ $(document).ready(function() {
 		$('#modal').addClass('hidden');
 	});
 
-	// Enter explore
-	$('#button').click(function() {
-		var scrollX = $('#page2').position().left;
-		console.log(scrollX);
-		// $('#view').scrollLeft($('#page2').position().left);
+	// Backtrack to previous page
+	$(document).on('click', '.breadcrumb', function(e) {
+		e.stopPropagation();
+		$(this).removeClass('breadcrumb');
+		var scrollX = $(this).position().left;
 		$('#view').css('overflow-x', 'scroll');
-		TweenLite.to($('#view'), 0.2, {scrollTo: {x: scrollX}, ease: Power1.easeOut});
-		focus($('#page2'));
+		TweenLite.to($('#view'), 0.4, {scrollTo: {x: scrollX}, ease: Power1.easeInOut});
 		$('#view').css('overflow-x', 'hidden');
 	});
+
+	// Enter explore
+	$('#button').click(function(e) {
+		e.stopPropagation();
+		var scrollX = $('#page2').position().left;
+		$('#view').css('overflow-x', 'scroll');
+		TweenLite.to($('#view'), 0.3, {scrollTo: {x: scrollX}, ease: Power1.easeInOut});
+		$('#view').css('overflow-x', 'hidden');
+		$('#modal').addClass('breadcrumb');
+	});
+
 });
