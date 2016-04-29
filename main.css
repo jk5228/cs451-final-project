@@ -1,0 +1,271 @@
+*::-webkit-scrollbar {
+  width: 0 !important; }
+
+* {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none !important; }
+
+body {
+  background-color: #222;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+#view {
+  z-index: 0;
+  pointer-events: none;
+  position: relative;
+  width: 68vh;
+  height: 84vh;
+  margin-top: 3vh;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+  border-left: 2vh;
+  border-right: 2vh;
+  border-top: 5vh;
+  border-bottom: 5vh;
+  border-style: solid;
+  border-radius: 3vh;
+  border-color: rgba(0, 0, 0, 0.2); }
+  #view #view-plane {
+    pointer-events: all;
+    height: 100%;
+    width: 210vh; }
+
+.page {
+  float: left;
+  position: relative;
+  display: inline-block;
+  width: 68vh;
+  height: 84vh;
+  background-color: white;
+  color: #222; }
+  .page div.image {
+    cursor: pointer;
+    height: 40%;
+    background-origin: center; }
+  .page p {
+    margin: 1.5rem;
+    font-family: 'garamond'; }
+  .page p:first-child {
+    padding-top: 0.2rem; }
+
+#page2, #page3 {
+  left: -1rem; }
+
+#page3 {
+  left: -2rem; }
+
+#page1 {
+  z-index: 350;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46); }
+  #page1 #pl1 {
+    background-size: cover;
+    background-image: url("assets/pl1.jpg"); }
+
+.page.explore {
+  background-color: #efefef;
+  box-shadow: none; }
+
+.hidden {
+  pointer-events: none;
+  opacity: 0 !important; }
+
+.breadcrumb {
+  cursor: pointer;
+  -webkit-transition: left 0.2s ease-in-out !important;
+  -moz-transition: left 0.2s ease-in-out !important;
+  -o-transition: left 0.2s ease-in-out !important;
+  transition: left 0.2s ease-in-out !important; }
+
+#modal {
+  z-index: 400;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  display: block;
+  opacity: 1;
+  width: 68vh;
+  height: 84vh;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  -moz-transition: opacity 0.1s ease-in-out;
+  -o-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out; }
+  #modal #close {
+    position: absolute;
+    right: 0;
+    height: 2rem;
+    width: 2rem;
+    margin: 2rem;
+    margin-top: 0;
+    background-size: cover;
+    background-image: url("assets/close.png");
+    cursor: pointer; }
+  #modal #profile {
+    padding: 2rem;
+    margin-bottom: 3.5rem; }
+    #modal #profile .profile-photo {
+      display: inline-block;
+      float: left;
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 1.75rem;
+      background-size: cover;
+      background-position: center, right;
+      background-image: url("assets/dicorcia.jpg"); }
+    #modal #profile .profile-text {
+      margin-left: 2rem;
+      float: left;
+      display: inline-block; }
+      #modal #profile .profile-text .name {
+        margin-top: 0.4rem;
+        font-family: 'myriad pro';
+        font-size: 1.5rem;
+        font-weight: bold; }
+      #modal #profile .profile-text .title {
+        font-family: 'myriad pro'; }
+  #modal #image {
+    height: 40%;
+    margin-bottom: 2.5rem;
+    background-size: cover;
+    background-image: url("assets/pl1.jpg"); }
+  #modal #meta #top {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    overflow: auto; }
+    #modal #meta #top #title {
+      margin-top: 0.5rem;
+      display: inline-block;
+      float: left;
+      font-family: 'myriad pro'; }
+      #modal #meta #top #title h2 {
+        font-size: 2rem;
+        margin: 0; }
+      #modal #meta #top #title h4 {
+        font-weight: normal;
+        line-height: 0.6; }
+    #modal #meta #top #button {
+      cursor: pointer;
+      display: inline-block;
+      float: right;
+      font-family: 'myriad pro';
+      font-weight: 200;
+      padding: 1rem;
+      text-align: center;
+      color: white;
+      background-color: #be4243; }
+  #modal #meta #description {
+    padding: 2rem;
+    padding-top: 0rem;
+    margin-top: 1.5rem;
+    font-family: 'garamond'; }
+
+.page.explore {
+  overflow: scroll; }
+  .page.explore .card {
+    cursor: pointer;
+    position: relative;
+    width: 56vh;
+    left: 6vh;
+    margin-top: 2vh;
+    padding: 1vh;
+    background-color: white;
+    outline-color: rgba(255, 255, 255, 0);
+    outline-width: 4px;
+    outline-style: solid;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+    -webkit-transition: outline-color 0.2s ease-in-out;
+    -moz-transition: outline-color 0.2s ease-in-out;
+    -o-transition: outline-color 0.2s ease-in-out;
+    transition: outline-color 0.2s ease-in-out; }
+    .page.explore .card .photo-container {
+      height: 30vh; }
+      .page.explore .card .photo-container .photo {
+        position: relative;
+        float: left;
+        display: inline-block;
+        background-size: cover;
+        background-position: center; }
+      .page.explore .card .photo-container .photo.big {
+        height: 100%;
+        width: 37vh;
+        margin-right: 1vh; }
+      .page.explore .card .photo-container .photo.small-container {
+        height: 100%;
+        width: 18vh; }
+        .page.explore .card .photo-container .photo.small-container .photo.small {
+          width: 100%;
+          height: 14.5vh;
+          margin: 0vh; }
+        .page.explore .card .photo-container .photo.small-container .photo.small:first-child {
+          margin-bottom: 1vh; }
+    .page.explore .card .card-title {
+      font-family: 'helvetica neue';
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-top: 1vh; }
+      .page.explore .card .card-title span {
+        color: #777; }
+  .page.explore .card:last-child {
+    margin-bottom: 2vh; }
+  .page.explore .card.highlight {
+    outline-color: #96c8ff; }
+  .page.explore .card.breadcrumb {
+    left: 9.5vh; }
+
+#page3 {
+  z-index: 200; }
+
+#page2 {
+  z-index: 300;
+  overflow-x: visible; }
+  #page2 #series.card .photo.big {
+    background-image: url("assets/pl4.jpg"); }
+  #page2 #series.card .photo.small:nth-child(1) {
+    background-image: url("assets/pl6.jpg"); }
+  #page2 #series.card .photo.small:nth-child(2) {
+    background-image: url("assets/pl7.jpg"); }
+  #page2 #heads.card .photo.big {
+    background-image: url("assets/pl2.jpg"); }
+  #page2 #heads.card .photo.small:nth-child(1) {
+    background-image: url("assets/pl3.png"); }
+  #page2 #heads.card .photo.small:nth-child(2) {
+    background-image: url("assets/pl5.jpg"); }
+  #page2 #photogs.card .photo.big {
+    background-image: url("assets/jw.jpg"); }
+  #page2 #photogs.card .photo.small:nth-child(1) {
+    background-image: url("assets/mf.jpg"); }
+  #page2 #photogs.card .photo.small:nth-child(2) {
+    background-image: url("assets/ls.jpg"); }
+
+#page3 #heads2.card .photo.big {
+  background-image: url("assets/pl2.jpg"); }
+#page3 #heads2.card .photo.small:nth-child(1) {
+  background-image: url("assets/pl3.png"); }
+#page3 #heads2.card .photo.small:nth-child(2) {
+  background-image: url("assets/pl5.jpg"); }
+#page3 #hustlers.card .photo.big {
+  background-image: url("assets/pl8.jpg"); }
+#page3 #hustlers.card .photo.small:nth-child(1) {
+  background-image: url("assets/pl6.jpg"); }
+#page3 #hustlers.card .photo.small:nth-child(2) {
+  background-image: url("assets/pl7.jpg"); }
+#page3 #streetwork.card .photo.big {
+  background-image: url("assets/pl10.jpg"); }
+#page3 #streetwork.card .photo.small:nth-child(1) {
+  background-image: url("assets/pl11.jpg"); }
+#page3 #streetwork.card .photo.small:nth-child(2) {
+  background-image: url("assets/pl12.jpg"); }
+#page3 #east.card .photo.big {
+  background-image: url("assets/pl13.jpg"); }
+#page3 #east.card .photo.small:nth-child(1) {
+  background-image: url("assets/pl14.jpg"); }
+#page3 #east.card .photo.small:nth-child(2) {
+  background-image: url("assets/pl15.jpg"); }
+
+/*# sourceMappingURL=main.css.map */
