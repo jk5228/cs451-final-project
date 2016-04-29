@@ -1,5 +1,3 @@
-// App code
-
 $(document).ready(function() {
 
 	// Make explore pages draggable
