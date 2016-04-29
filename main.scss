@@ -19,14 +19,14 @@ body {
 
 #view {
 	z-index: 0;
+	pointer-events: none;
 	position: relative;
 	width: 68vh;
 	height: 84vh;
 	margin-top: 3vh;
 	margin-right: auto;
 	margin-left: auto;
-	overflow-x: scroll;
-	overflow-y: hidden;
+	overflow: hidden;
 	border-left: 2vh;
 	border-right: 2vh;
 	border-top: 5vh;
@@ -34,9 +34,9 @@ body {
 	border-style: solid;
 	border-radius: 3vh;
 	border-color: rgba(0,0,0,.2);
-	overflow-x: hidden;
 
 	#view-plane {
+		pointer-events: all;
 		height: 100%;
 		width: 210vh;
 	}
@@ -67,13 +67,12 @@ body {
 	}
 }
 
-#page2 {
-	z-index: 100;
+#page2, #page3 {
 	left: -1rem;
 }
 
 #page1 {
-	z-index: 300;
+	z-index: 350;
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
 
 	#pl1 {
@@ -94,6 +93,10 @@ body {
 
 .breadcrumb {
 	cursor: pointer;
+	-webkit-transition: left 0.5s ease-in-out !important;
+	-moz-transition: left 0.5s ease-in-out !important;
+	-o-transition: left 0.5s ease-in-out !important;
+	transition: left 0.5s ease-in-out !important;
 }
 
 #modal {
@@ -220,7 +223,14 @@ body {
 		margin-top: 2vh;
 		padding: 1vh;
 		background-color: white;
+		outline-color: rgba(255,255,255,0);
+		outline-width: 4px;
+		outline-style: solid;
 		box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+		-webkit-transition: outline-color 0.2s ease-in-out;
+		-moz-transition: outline-color 0.2s ease-in-out;
+		-o-transition: outline-color 0.2s ease-in-out;
+		transition: outline-color 0.2s ease-in-out;
 
 		.photo-container {
 			height: 30vh;
@@ -270,9 +280,24 @@ body {
 	.card:last-child {
 		margin-bottom: 2vh;
 	}
+
+	.card.highlight {
+		outline-color: rgba(100,150,200,0.9);
+	}
+
+	.card.breadcrumb {
+		left: 5rem;
+	}
+}
+
+#page3 {
+	z-index: 200;
 }
 
 #page2 {
+	z-index: 300;
+	overflow-x: visible;
+
 	#series.card {
 		.photo.big {
 			background-image: url('assets/pl4.jpg');
@@ -282,6 +307,30 @@ body {
 		}
 		.photo.small:nth-child(2) {
 			background-image: url('assets/pl7.jpg');
+		}
+	}
+
+	#heads.card {
+		.photo.big {
+			background-image: url('assets/pl2.jpg');
+		}
+		.photo.small:nth-child(1) {
+			background-image: url('assets/pl3.png');
+		}
+		.photo.small:nth-child(2) {
+			background-image: url('assets/pl5.jpg');
+		}
+	}
+
+	#photogs.card {
+		.photo.big {
+			background-image: url('assets/jw.jpg');
+		}
+		.photo.small:nth-child(1) {
+			background-image: url('assets/mf.jpg');
+		}
+		.photo.small:nth-child(2) {
+			background-image: url('assets/ls.jpg');
 		}
 	}
 }
