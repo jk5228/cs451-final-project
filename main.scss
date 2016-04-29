@@ -71,6 +71,10 @@ body {
 	left: -1rem;
 }
 
+#page3 {
+	left: -2rem;
+}
+
 #page1 {
 	z-index: 350;
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
@@ -93,10 +97,10 @@ body {
 
 .breadcrumb {
 	cursor: pointer;
-	-webkit-transition: left 0.5s ease-in-out !important;
-	-moz-transition: left 0.5s ease-in-out !important;
-	-o-transition: left 0.5s ease-in-out !important;
-	transition: left 0.5s ease-in-out !important;
+	-webkit-transition: left 0.2s ease-in-out !important;
+	-moz-transition: left 0.2s ease-in-out !important;
+	-o-transition: left 0.2s ease-in-out !important;
+	transition: left 0.2s ease-in-out !important;
 }
 
 #modal {
@@ -218,8 +222,7 @@ body {
 		cursor: pointer;
 		position: relative;
 		width: 56vh;
-		margin-left: auto;
-		margin-right: auto;
+		left: 6vh;
 		margin-top: 2vh;
 		padding: 1vh;
 		background-color: white;
@@ -282,11 +285,11 @@ body {
 	}
 
 	.card.highlight {
-		outline-color: rgba(100,150,200,0.9);
+		outline-color: rgba(150,200,255,1);
 	}
 
 	.card.breadcrumb {
-		left: 5rem;
+		left: 9.5vh;
 	}
 }
 
@@ -331,6 +334,57 @@ body {
 		}
 		.photo.small:nth-child(2) {
 			background-image: url('assets/ls.jpg');
+		}
+	}
+}
+
+#page3 {
+
+	#heads2.card {
+		.photo.big {
+			background-image: url('assets/pl2.jpg');
+		}
+		.photo.small:nth-child(1) {
+			background-image: url('assets/pl3.png');
+		}
+		.photo.small:nth-child(2) {
+			background-image: url('assets/pl5.jpg');
+		}
+	}
+
+	#hustlers.card {
+		.photo.big {
+			background-image: url('assets/pl8.jpg');
+		}
+		.photo.small:nth-child(1) {
+			background-image: url('assets/pl6.jpg');
+		}
+		.photo.small:nth-child(2) {
+			background-image: url('assets/pl7.jpg');
+		}
+	}
+
+	#streetwork.card {
+		.photo.big {
+			background-image: url('assets/pl10.jpg');
+		}
+		.photo.small:nth-child(1) {
+			background-image: url('assets/pl11.jpg');
+		}
+		.photo.small:nth-child(2) {
+			background-image: url('assets/pl12.jpg');
+		}
+	}
+
+	#east.card {
+		.photo.big {
+			background-image: url('assets/pl13.jpg');
+		}
+		.photo.small:nth-child(1) {
+			background-image: url('assets/pl14.jpg');
+		}
+		.photo.small:nth-child(2) {
+			background-image: url('assets/pl15.jpg');
 		}
 	}
 }

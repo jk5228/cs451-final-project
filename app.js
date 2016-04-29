@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	// Make explore pages draggable
-	Draggable.create('.explore', {type: 'scrollTop', throwProps: true, edgeResistance: 0.8});
+	Draggable.create('.explore', {type: 'scrollTop', throwProps: true, edgeResistance: 0.9});
 
 	// Activate modal
 	$('#pl1').click(function() {
@@ -45,16 +45,26 @@ $(document).ready(function() {
 		window.setTimeout(function() { $('#series').removeClass('highlight'); }, 1000);
 	});
 
-	// Enter series page
+	// Series click
 	$('#series').click(function(e) {
 		e.stopPropagation();
-		if ($(this).hasClass('breadcrumb')) return;
-		var scrollX = $('#page3').position().left;
-		console.log(scrollX);
-		$('#view').css('overflow-x', 'scroll');
-		TweenLite.to($('#view'), 0.3, {scrollTo: {x: '+='+scrollX}, ease: Power1.easeInOut});
-		$('#view').css('overflow-x', 'hidden');
-		$('#series').addClass('breadcrumb');
+
+		// If breadcrumb, backtrack to previous page
+		if ($(this).hasClass('breadcrumb')) {
+			e.stopPropagation();
+			$(this).removeClass('breadcrumb');
+			var scrollX = $('#page2').position().left;
+			$('#view').css('overflow-x', 'scroll');
+			TweenLite.to($('#view'), 0.4, {scrollTo: {x: '+='+scrollX}, ease: Power1.easeInOut});
+			$('#view').css('overflow-x', 'hidden');
+		} else {
+			var scrollX = $('#page3').position().left;
+			$('#view').css('overflow-x', 'scroll');
+			TweenLite.to($('#view'), 0.3, {scrollTo: {x: '+='+scrollX}, ease: Power1.easeInOut});
+			$('#view').css('overflow-x', 'hidden');
+			$('#series').addClass('breadcrumb');
+		}
+
 	});
 
 });
