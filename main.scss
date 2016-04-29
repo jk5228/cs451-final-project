@@ -4,7 +4,7 @@
 
 * {
 	-ms-overflow-style: none;
-	overflow: -moz-scrollbars-none;
+	overflow: -moz-scrollbars-none !important;
 }
 
 body {
@@ -184,7 +184,6 @@ body {
 
 				h2 {
 					font-size: 2rem;
-					line-height: 0.6;
 					margin: 0;
 				}
 
@@ -209,7 +208,8 @@ body {
 
 		#description {
 			padding: 2rem;
-			padding-top: 1.5rem;
+			padding-top: 0rem;
+			margin-top: 1.5rem;
 			font-family: 'garamond';
 		}
 	}
